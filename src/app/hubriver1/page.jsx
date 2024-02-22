@@ -1,35 +1,69 @@
+
 "use client";
-import { useState } from "react";
-import data from "../database/hub1.json"; 
+import React, { useState, useEffect } from "react";
+import Loader from "../Components/Loading"; // Assuming the Loader component is in the same directory
+import data from "../database/hub1.json";
 
-export default function Home() {
-  const [searchTerm, setSearchTerm] = useState("");
+const Home = () => {
+  const [searchTermName, setSearchTermName] = useState("");
+  const [searchTermKhundi, setSearchTermKhundi] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [filteredData, setFilteredData] = useState([]);
 
-  const filteredData = data.filter((item) =>
-    item.Name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  useEffect(() => {
+    // Simulating data fetching delay
+    const fetchData = () => {
+      setTimeout(() => {
+        setFilteredData(
+          data.filter(
+            (item) =>
+              item.Name.toLowerCase().includes(searchTermName.toLowerCase()) &&
+              item.KHUNDI.toLowerCase().includes(searchTermKhundi.toLowerCase())
+          )
+        );
+        setLoading(false);
+      }, 800); // Adjust the delay as needed
+    };
 
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
+    fetchData();
+  }, [searchTermName, searchTermKhundi]);
+
+  const handleSearchNameChange = (e) => {
+    setSearchTermName(e.target.value);
+    setLoading(true); // Set loading to true when starting a new search
+  };
+
+  const handleSearchKhundiChange = (e) => {
+    setSearchTermKhundi(e.target.value);
+    setLoading(true); // Set loading to true when starting a new search
   };
 
   return (
     <main>
       <h1 className="bg-green-500 text-white text-3xl md:text-5xl font-extrabold text-center divide-x p-6 h-20">
-        OMJ Graveyard List HubRiver1
+        OMJ Graveyard List Saadi Town
       </h1>
 
       <div className="mb-4 flex justify-center">
         <input
           type="text"
           placeholder="Search by Name"
-          value={searchTerm}
-          onChange={handleSearchChange}
+          value={searchTermName}
+          onChange={handleSearchNameChange}
+          className="p-2 border border-gray-300 rounded-md mr-2"
+        />
+        <input
+          type="text"
+          placeholder="Search by Khundi"
+          value={searchTermKhundi}
+          onChange={handleSearchKhundiChange}
           className="p-2 border border-gray-300 rounded-md"
         />
       </div>
 
-      {filteredData.length === 0 ? (
+      {loading ? (
+        <Loader />
+      ) : filteredData.length === 0 ? (
         <p className="text-center text-gray-600">No matching records found.</p>
       ) : (
         <table className="table-auto text-center bg-white border-black border-2 w-full">
@@ -72,4 +106,6 @@ export default function Home() {
       )}
     </main>
   );
-}
+};
+
+export default Home;
