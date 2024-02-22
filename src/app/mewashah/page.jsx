@@ -2,7 +2,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Loader from "../Components/Loading"; // Assuming the Loader component is in the same directory
-import data from "../database/hub2.json";
+import data from "../database/mewashah.json";
 
 const Home = () => {
   const [searchTermName, setSearchTermName] = useState("");

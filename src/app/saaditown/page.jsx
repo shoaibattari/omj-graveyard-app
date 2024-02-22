@@ -1,8 +1,7 @@
-
 "use client";
 import React, { useState, useEffect } from "react";
 import Loader from "../Components/Loading"; // Assuming the Loader component is in the same directory
-import data from "../database/hub2.json";
+import data from "../database/saaditown.json";
 
 const Home = () => {
   const [searchTermName, setSearchTermName] = useState("");
@@ -44,20 +43,20 @@ const Home = () => {
         OMJ Graveyard List Saadi Town
       </h1>
 
-      <div className="mb-4 flex justify-center">
+      <div className="mb-4 md:flex  md:justify-center ">
         <input
           type="text"
-          placeholder="Search by Name"
+          placeholder="Enter Full Name"
           value={searchTermName}
           onChange={handleSearchNameChange}
-          className="p-2 border border-gray-300 rounded-md mr-2"
+          className="p-2 border border-gray-300 rounded-md mr-2 w-full md:w-auto "
         />
         <input
           type="text"
-          placeholder="Search by Khundi"
+          placeholder="Enter Khundi Name"
           value={searchTermKhundi}
           onChange={handleSearchKhundiChange}
-          className="p-2 border border-gray-300 rounded-md"
+          className="p-2 border border-gray-300 rounded-md mr-2 w-full md:w-auto"
         />
       </div>
 
