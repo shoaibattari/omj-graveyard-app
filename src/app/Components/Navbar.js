@@ -36,9 +36,9 @@ const Navbar = () => {
   ];
 
   return (
-    <div className=" flex justify-between items-center w-full h-20 px-4 text-white bg-green-500 fixed nav ">
+    <div className=" flex justify-between items-center w-full h-20 px-1 md:px-4 bg-white text-gray-700 fixed nav ">
       <div className="">
-        <h1 className="text-2xl font-extrabold md:text-3xl font-signature ml-2 ">
+        <h1 className="text-2xl font-extrabold md:text-3xl font-signature ml-2 md:ml-6 ">
           <Link href="/" target="_blank">
             OMJ GRAVEYARD
           </Link>
@@ -49,7 +49,7 @@ const Navbar = () => {
         {links.map(({ id, name, link }) => (
           <li
             key={id}
-            className="nav-links px-4 cursor-pointer font-medium text-2xl text-gray-900 hover:scale-105 hover:text-white duration-200 link-underline"
+            className="nav-links px-4 cursor-pointer font-extrabold text-2xl text-gray-700 hover:scale-125 hover:text-gray-900 duration-200 link-underline"
           >
             <Link href={link}>{name}</Link>
           </li>
@@ -58,17 +58,17 @@ const Navbar = () => {
 
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-white md:hidden"
+        className="cursor-pointer pr-4 z-10 text-gray-700 md:hidden"
       >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+        {nav ? <FaTimes size={40} /> : <FaBars size={30} />}
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-green-500 text-white ">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-white ">
           {links.map(({ id, name, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer py-6 text-4xl text-gray-900 hover:scale-105 hover:text-white duration-200"
+              className="px-4 cursor-pointer py-6 text-4xl font-extrabold text-gray-700 hover:scale-125 hover:text-gray-900 duration-300"
             >
               <Link onClick={() => setNav(!nav)} href={link}>
                 {name}

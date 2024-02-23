@@ -38,41 +38,42 @@ const Home = () => {
   };
 
   return (
-    <main>
+    <main className="md:mx-8 mx-1">
       <h1 className="bg-green-500 text-white text-3xl md:text-5xl font-extrabold text-center divide-x p-6 h-20">
         OMJ Graveyard List Saadi Town
       </h1>
-
-      <div className="mb-4 md:flex  md:justify-center ">
+      <div className="mb-4 md:flex  md:justify-center  m-2 ">
         <input
           type="text"
           placeholder="Enter Full Name"
           value={searchTermName}
           onChange={handleSearchNameChange}
-          className="p-2 border border-gray-300 rounded-md mr-2 w-full md:w-auto "
+          className="p-4 border border-gray-300 rounded-md mr-2 w-full text-2xl   "
         />
         <input
           type="text"
           placeholder="Enter Khundi Name"
           value={searchTermKhundi}
           onChange={handleSearchKhundiChange}
-          className="p-2 border border-gray-300 rounded-md mr-2 w-full md:w-auto"
+          className="mt-2 md:mt-0 p-4 border border-gray-300 rounded-md mr-2 w-full md:w-auto text-2xl  "
         />
       </div>
 
       {loading ? (
         <Loader />
       ) : filteredData.length === 0 ? (
-        <p className="text-center text-gray-600">No matching records found.</p>
+        <p className="text-center md:text-7xl font-extrabold text-gray-600 uppercase">
+          No matching records found.
+        </p>
       ) : (
-        <table className="table-auto text-center bg-white border-black border-2 w-full">
-          <thead>
-            <tr className="text-sm md:text-2xl">
-              <th className="border-2 border-gray-600">No</th>
-              <th className="border-2 border-gray-600">Graveyard</th>
-              <th className="border-2 border-gray-600">Name</th>
-              <th className="border-2 border-gray-600">KHUNDI</th>
-              <th className="border-2 border-gray-600">DOD</th>
+        <table className="table-auto text-center  border-2 w-full">
+          <thead className="h-8 md:h-14">
+            <tr className="text-md md:text-2xl text-gray-800 bg-gray-200">
+              <th className="border-2 border-gray-200">No</th>
+              {/* <th className="border-2 border-gray-200">Graveyard</th> */}
+              <th className="border-2 border-gray-200">Name</th>
+              <th className="border-2 border-gray-200">KHUNDI</th>
+              <th className="border-2 border-gray-200">DOD</th>
             </tr>
           </thead>
           <tbody>
@@ -80,22 +81,24 @@ const Home = () => {
               <tr
                 key={d.Name}
                 className={`${
-                  index % 2 === 0 ? "bg-gray-100" : "bg-white"
-                } border border-dashed border-green-500 text-xs md:text-1xl font-bold text-gray-800`}
+                  index % 2 === 0
+                    ? "bg-gray-700 text-white"
+                    : "bg-white text-gray-700"
+                } border border-dashed border-green-500 text-md md:text-2xl font-bold text-gray-800  `}
               >
-                <td className="border-2 border-gray-600 text-1xl text-md:2xl w-8 md:w-auto">
+                <td className="border-2 border-gray-200  text-md:2xl w-18 md:w-auto px-1 h-20  md:px-6 md:py-4">
                   {d.GraveNo}
                 </td>
-                <td className="border-2 border-gray-600 text-1xl text-md:2xl">
+                {/* <td className="border-2 border-gray-200 text-1xl text-md:2xl">
                   {d.Graveyard}
-                </td>
-                <td className="border-2 border-gray-600 text-1xl text-md:2xl">
+                </td> */}
+                <td className="border-2 border-gray-200 text-1xl text-md:2xl">
                   {d.Name}
                 </td>
-                <td className="border-2 border-gray-600 text-1xl text-md:2xl">
+                <td className="border-2 border-gray-200 text-1xl text-md:2xl">
                   {d.KHUNDI}
                 </td>
-                <td className="border-2 border-gray-600 text-1xl text-md:2xl w-16 md:w-auto">
+                <td className="border-2 border-gray-200  text-xs md:text-2xl w-16 md:w-auto">
                   {d.DOD}
                 </td>
               </tr>

@@ -1,8 +1,8 @@
-
 "use client";
 import React, { useState, useEffect } from "react";
 import Loader from "../Components/Loading"; // Assuming the Loader component is in the same directory
 import data from "../database/hub2.json";
+import Table from "../Components/Table";
 
 const Home = () => {
   const [searchTermName, setSearchTermName] = useState("");
@@ -44,20 +44,20 @@ const Home = () => {
         OMJ Graveyard List Saadi Town
       </h1>
 
-      <div className="mb-4 flex justify-center">
+      <div className="mb-4 md:flex  md:justify-center  m-2 ">
         <input
           type="text"
-          placeholder="Search by Name"
+          placeholder="Enter Full Name"
           value={searchTermName}
           onChange={handleSearchNameChange}
-          className="p-2 border border-gray-300 rounded-md mr-2"
+          className="p-4 border border-gray-300 rounded-md mr-2 w-full text-2xl   "
         />
         <input
           type="text"
-          placeholder="Search by Khundi"
+          placeholder="Enter Khundi Name"
           value={searchTermKhundi}
           onChange={handleSearchKhundiChange}
-          className="p-2 border border-gray-300 rounded-md"
+          className="mt-2 md:mt-0 p-4 border border-gray-300 rounded-md mr-2 w-full md:w-auto text-2xl  "
         />
       </div>
 
@@ -66,43 +66,8 @@ const Home = () => {
       ) : filteredData.length === 0 ? (
         <p className="text-center text-gray-600">No matching records found.</p>
       ) : (
-        <table className="table-auto text-center bg-white border-black border-2 w-full">
-          <thead>
-            <tr className="text-sm md:text-2xl">
-              <th className="border-2 border-gray-600">No</th>
-              <th className="border-2 border-gray-600">Graveyard</th>
-              <th className="border-2 border-gray-600">Name</th>
-              <th className="border-2 border-gray-600">KHUNDI</th>
-              <th className="border-2 border-gray-600">DOD</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredData.map((d, index) => (
-              <tr
-                key={d.Name}
-                className={`${
-                  index % 2 === 0 ? "bg-gray-100" : "bg-white"
-                } border border-dashed border-green-500 text-xs md:text-1xl font-bold text-gray-800`}
-              >
-                <td className="border-2 border-gray-600 text-1xl text-md:2xl w-8 md:w-auto">
-                  {d.GraveNo}
-                </td>
-                <td className="border-2 border-gray-600 text-1xl text-md:2xl">
-                  {d.Graveyard}
-                </td>
-                <td className="border-2 border-gray-600 text-1xl text-md:2xl">
-                  {d.Name}
-                </td>
-                <td className="border-2 border-gray-600 text-1xl text-md:2xl">
-                  {d.KHUNDI}
-                </td>
-                <td className="border-2 border-gray-600 text-1xl text-md:2xl w-16 md:w-auto">
-                  {d.DOD}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <Table filteredData={filteredData} />
+        
       )}
     </main>
   );
