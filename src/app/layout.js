@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar";
 
 export const metadata = {
   title: "OMJ Graveyard",
-  description: "create app for graveyard data searching for visitors gravyard",
+  description: "OMJ graveyard data searching for visitors gravyard",
 };
 
 export default function RootLayout({ children }) {

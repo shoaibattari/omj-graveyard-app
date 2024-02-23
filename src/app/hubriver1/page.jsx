@@ -4,6 +4,7 @@ import Loader from "../Components/Loading"; // Assuming the Loader component is 
 import data from "../database/hub1.json";
 import Table from "../Components/Table";
 
+
 const Home = () => {
   const [searchTermName, setSearchTermName] = useState("");
   const [searchTermKhundi, setSearchTermKhundi] = useState("");

@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import Loader from "../Components/Loading"; // Assuming the Loader component is in the same directory
 import data from "../database/saaditown.json";
 
+
+
+
 const Home = () => {
   const [searchTermName, setSearchTermName] = useState("");
   const [searchTermKhundi, setSearchTermKhundi] = useState("");
