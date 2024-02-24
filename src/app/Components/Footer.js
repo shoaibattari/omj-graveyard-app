@@ -12,31 +12,25 @@ export default function Footer() {
   return (
     <>
       <div className="md:px-[48px] py-[16px] text-center bg-black text-gray-100">
-       Disclaimer
+        Disclaimer
         <p className="text-sm p-3">
           This app is not an official OMJ Graveyard application. It is an
           independent service created to assist users in accessing graveyard
           data for personal purposes. For official information and services,
           please refer to OMJ official channels.
           <br />
-          <br />
-          <br />
         </p>
         <div className="md:flex justify-between ">
-          <p className=" font-bold">
-            All Rights Reserved © | <br className="md:hidden" />
+          <p className=" font-bold">All Rights Reserved ©</p>
+          <div className=" md:flex ">
+            <p>App Create And Design By - </p>
             <Link
               href="https://github.com/shoaibattari"
               target="_blank"
-              className="hover:text-gray-300"
+              className="hover:text-gray-300 font-bold"
             >
-              Shoaib Memon
+              <p>Shoaib Abdul Sattar Khosa</p>
             </Link>
-          </p>
-          <div>
-            <Link href={"/"}>Legals </Link>|
-            <Link href={"/"}> Terms Of Use </Link>|
-            <Link href={"/"}> Privacy Policy</Link>
           </div>
           <div className="sm:flex sm:items-center sm:justify-between pb-4">
             <div className="flex mt-4 space-x-6 justify-center  sm:mt-0">
