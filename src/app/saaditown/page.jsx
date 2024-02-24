@@ -63,7 +63,7 @@ const Home = () => {
       {loading ? (
         <Loader />
       ) : filteredData.length === 0 ? (
-        <p className="text-center md:text-7xl font-extrabold text-gray-600 uppercase">
+        <p className="text-center md:text-7xl font-extrabold text-gray-600 uppercase  h-svh">
           No matching records found.
         </p>
       ) : (
