@@ -51,7 +51,7 @@ const Navbar = () => {
             key={id}
             className="nav-links px-4 cursor-pointer font-extrabold  text-2xl text-gray-700 hover:scale-125 hover:text-gray-900 duration-200 link-underline"
           >
-            <Link href={link}>{name}</Link>
+            <Link href={link} target="_blank">{name}</Link>
           </li>
         ))}
       </ul>
