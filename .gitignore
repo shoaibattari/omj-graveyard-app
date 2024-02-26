@@ -10,8 +10,6 @@
 /coverage
 
 
-# database
-src/app/database
 
 
 # next.js
