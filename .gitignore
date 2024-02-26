@@ -9,6 +9,11 @@
 # testing
 /coverage
 
+
+# database
+database
+
+
 # next.js
 /.next/
 /out/

@@ -25,7 +25,7 @@ export default function Footer() {
           <div className=" md:flex ">
             <p>App Create And Design By - </p>
             <Link
-              href="https://github.com/shoaibattari"
+              href="https://shoaibmemon.vercel.app/"
               target="_blank"
               className="hover:text-gray-300 font-bold"
             >
