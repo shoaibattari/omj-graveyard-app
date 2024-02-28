@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="md:px-[48px] py-[16px] text-center bg-black text-gray-100">
         Disclaimer
         <p className="text-sm p-3">
-          This app is not an official OMJ Graveyard application. It is an
+          This app is not  official Okhai Memon Graveyard application. It is an
           independent service created to assist users in accessing graveyard
           data for personal purposes. For official information and services,
           please refer to OMJ official channels.

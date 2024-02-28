@@ -5,7 +5,7 @@ import Footer from "./Components/Footer";
 
 export const metadata = {
   title: "OMJ Graveyard",
-  description: "OMJ graveyard data searching for visitors gravyard",
+  description: "Okhai Memon Jamat graveyards data searching for visitors gravyards",
 };
 
 export default function RootLayout({ children }) {
