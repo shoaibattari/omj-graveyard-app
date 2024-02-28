@@ -17,7 +17,7 @@ function Home() {
       </h1>
 
       <Hero />
-      <h1 className=" text-gray-600 text-3xl md:text-5xl font-extrabold text-center divide-x p-6 h-20">
+      <h1 className=" font-extrabold text-gray-700 text-lg md:text-5xl  text-center divide-x p-6 h-20">
        Thanks Full Of Okhai Memon Jamat For Appreciation
       </h1>
       <Slider />
