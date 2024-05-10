@@ -17,10 +17,10 @@ function Home() {
       </h1>
 
       <Hero />
-      {/* <h1 className=" font-extrabold text-gray-700 text-lg md:text-5xl  text-center divide-x p-6 h-20">
+      <h1 className=" font-extrabold text-gray-700 text-lg md:text-5xl  text-center divide-x p-6 h-20">
        Thanks Full Of Okhai Memon Jamat For Appreciation
-      </h1> */}
-      {/* <Slider /> */}
+      </h1>
+      <Slider />
     </div>
   );
 }
