@@ -6,7 +6,7 @@ const NumberIncrementer = ({ stopNumber }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setNumber(prevNumber => {
+      setNumber(prevNumber => { 
         const nextNumber = prevNumber + 4  ;
         if (nextNumber >= stopNumber) {
           clearInterval(interval); // Stop the interval when the number reaches the stopNumber
