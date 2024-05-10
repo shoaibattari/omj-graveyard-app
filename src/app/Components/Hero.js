@@ -1,8 +1,4 @@
 import React from "react";
-import HUB1 from "../database/hub1.json";
-import HUB2 from "../database/hub2.json";
-import Saadi from "../database/saaditown.json";
-import mewa from "../database/mewashah.json";
 import NumberIncrementer from "../Components/Number";
 
 import Link from "next/link";
@@ -27,7 +23,7 @@ export default function Hero() {
         </div>
 
         <div className="mt-10 pb-1">
-          <div>
+          {/* <div>
             <div className=" inset-0 h-1/2 bg-gray-50" />
             <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-4xl mx-auto">
@@ -75,7 +71,7 @@ export default function Hero() {
                 </dl>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
