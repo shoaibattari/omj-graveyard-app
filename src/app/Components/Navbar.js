@@ -16,22 +16,27 @@ const Navbar = () => {
     {
       id: 2,
       name: "Hub River 1",
-      link: "hubriver1",
+      link: "/grave/hubriver1",
     },
     {
       id: 3,
       name: "Hub River 2",
-      link: "hubriver2",
+      link: "/grave/hubriver2",
     },
     {
       id: 4,
       name: "Saadi Town",
-      link: "saaditown",
+      link: "/grave/saaditown",
     },
     {
       id: 5,
       name: "Mewa Shah",
-      link: "mewashah",
+      link: "/grave/mewashah",
+    },
+    {
+      id: 6,
+      name: "Kath",
+      link: "/khundi/kath",
     },
   ];
 
