@@ -7,7 +7,7 @@ https://omj-graveyard-2024.vercel.app/
 
 2ND VERSION LINK:
 
-https://search-omjgraveyard.vercel.app/
+https://omjgraveyard.vercel.app/
 
 Disclaimer
 
